@@ -1,11 +1,11 @@
-# simple_shell
-Writing a simple UNIX command interpreter.
+# simple_shell :Start:
+~ Writing a simple UNIX command interpreter.
 
 # simple_shell project repository
 
 # Pre-requisites
 
-### Authorized functions and macros:
+### Authorized functions and macros:  :rule:
 - access (man 2 access)
 - chdir (man 2 chdir)
 - close (man 2 close)
@@ -38,12 +38,12 @@ Writing a simple UNIX command interpreter.
 - write (man 2 write)
 
 ### GCC command to compile:
-`
+
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 `
 ### Memory leak check
 
-$ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./hsh
+ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./hsh
 
 This wil compile all the '.c' files and change the output's name to 'hsh'.
 
@@ -58,36 +58,33 @@ hsh main.c shell.c
 $ exit
 $
 
-### Project Requirements
+### Project Requirements :run:
 =========================
-[0] README, man, AUTHORS    File: README.md, man_1_simple_shell, AUTHORS
-[1] passes the Betty checks
-[2] display prompt, REPL, Cntl + D, Perrors: "./shell: No such file or directory"    
+- [0] README, man, AUTHORS    File: README.md, man_1_simple_shell, AUTHORS
+- [1] passes the Betty checks
+- [2] display prompt, REPL, Cntl + D, Perrors: "./shell: No such file or directory"    
     work with  "/bin/ls", 
-[3] cmd + args;    ls -l , echo "..." , cd /home, 
-[4] Handle the PATH    ls -l /tmp
-[5] exit, only exit no args
-[6] env : print current env
-[7] Test suite: reg cases, 0-20,edge cases, 
-[8] _getline make your own 
-[9]  ..do not use strtok
-[10] exit 98, echo $?
-[11] Ctrl + C, should not quit
-[12] setenv, unsetenv, implement, 
-[13] cd [] cd $HOME, update env var PWD, cd -, 
-[14] Handle the commands separator ;,,  ls /var ; ls /var  ,   
-[15] Handle the && and || shell logical operators,  ls /var && ls /var,    ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
-[16] alias [name[='value'] ...]  ,   implement alias, 
-[17] Handle variables replacement  echo $PATH
+- [3] cmd + args;    ls -l , echo "..." , cd /home, 
+- [4] Handle the PATH    ls -l /tmp
+- [5] exit, only exit no args
+- [6] env : print current env
+- [7] Test suite: reg cases, 0-20,edge cases, 
+- [8] _getline make your own 
+- [9]  ..do not use strtok
+- [10] exit 98, echo $?
+- [11] Ctrl + C, should not quit
+- [12] setenv, unsetenv, implement, 
+- [13] cd [] cd $HOME, update env var PWD, cd -, 
+- [14] Handle the commands separator ;,,  ls /var ; ls /var  ,   
+- [15] Handle the && and || shell logical operators,  ls /var && ls /var,    ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
+- [16] alias [name[='value'] ...]  ,   implement alias, 
+- [17] Handle variables replacement  echo $PATH
      Handle the $? variable  echo $?
      Handle the $$ variable   echo $$
-[18] Handle comments (#)    echo $$ # ls -la
-[19] Usage: help [BUILTIN]  implement help builtin
-[20] history built-in , save a file named .simple_shell_history in the directory $HOME
-[21] Usage: simple_shell [filename]
-[19] Implement the help built-in   
-[20] Implement the history built-in, without any argument
-[21] File as input  :   simple_shell [filename]
+- [18] Handle comments (#)    echo $$ # ls -la
+- [19] Usage: help [BUILTIN]  implement help builtin
+- [20] Implement the history built-in, without any argument
+- [21] File as input  :   simple_shell [filename]
 
 README.md: this.
 
