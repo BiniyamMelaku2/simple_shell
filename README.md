@@ -1,11 +1,11 @@
-# simple_shell :Start:
-~ Writing a simple UNIX command interpreter.
+# simple_shell
+ Writing a simple UNIX command interpreter.
 
 # simple_shell project repository
 
 # Pre-requisites
 
-### Authorized functions and macros:  :rule:
+### Authorized functions and macros:
 - access (man 2 access)
 - chdir (man 2 chdir)
 - close (man 2 close)
@@ -58,7 +58,7 @@ hsh main.c shell.c
 $ exit
 $
 
-### Project Requirements :run:
+### Project Requirements
 =========================
 - [0] README, man, AUTHORS    File: README.md, man_1_simple_shell, AUTHORS
 - [1] passes the Betty checks
